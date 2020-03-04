@@ -43,7 +43,7 @@ const main = async function () {
                 json: true
             })
 
-            if (res.status != '1' || res.info != 'OK') {
+            if (res.status != '1' || res.info != 'OK' || res.count == 0) {
                 console.error(res)
                 throw new Error(`crawl ${adcode} fail`)
             }

@@ -2,7 +2,10 @@ import * as turf from '@turf/turf'
 import * as assert from 'assert'
 
 export const buildGeoJson = function (raw: any) {
-    assert.equal(raw.districts.length, 1)
+    if (raw.districts.length != 1) {
+        console.error(raw)
+        throw new Error('')
+    }
     let district = raw.districts[0]
 
     return {
