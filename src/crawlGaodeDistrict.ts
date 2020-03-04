@@ -43,9 +43,13 @@ const main = async function () {
                 json: true
             })
 
-            if (res.status != '1' || res.info != 'OK' || res.count == 0) {
+            if (res.status != '1' || res.info != 'OK') {
                 console.error(res)
                 throw new Error(`crawl ${adcode} fail`)
+            }
+
+            if (res.count == 0) {
+                console.warn(`level=${level}, ${adcode} is empty`)
             }
 
             fs.outputJSONSync(dataFilePath, res)
