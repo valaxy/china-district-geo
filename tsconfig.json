@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "preserve"
+    },
+    "include": [
+        "demo/**/*.ts",
+        "demo/**/*.tsx"
+    ]
+}

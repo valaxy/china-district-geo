@@ -1,0 +1,55 @@
+{
+  "name": "china-district-geo",
+  "version": "1.0.0",
+  "description": "中国行政区域",
+  "main": "index.js",
+  "dependencies": {
+    "@turf/turf": "^5.1.6",
+    "consola": "^2.11.3",
+    "fs-extra": "^8.1.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@types/amap-js-api": "^1.4.7",
+    "@types/amap-js-sdk": "^1.4.1",
+    "@types/fs-extra": "^8.1.0",
+    "@types/node": "^13.7.7",
+    "@types/request": "^2.48.4",
+    "@types/request-promise": "^4.1.45",
+    "@vue/babel-preset-jsx": "^1.1.2",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.1",
+    "power-assert": "^1.6.1",
+    "sass-loader": "^8.0.2",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.0",
+    "vue-property-decorator": "^8.4.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "demo": "webpack-dev-server --config demo/webpack.config.js",
+    "crawl": "ts-node src/crawlGaodeDistrict.ts",
+    "calc": "ts-node src/buildAdjacency.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valaxy/china-district-geo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valaxy/china-district-geo/issues"
+  },
+  "homepage": "https://github.com/valaxy/china-district-geo#readme"
+}
